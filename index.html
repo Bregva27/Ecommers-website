@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, ititial-scale=1.0">
+    <!--
+        - primary meta tags
+    -->
+    <title>responsive ecommerce clothing website</title>
+    <meta name="title" content="responsive ecommerce clothing website">
+    <meta name="description" content="This is an eCommerce html index made for clothing website">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--
+        - favicon
+    -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/svg+xml">
+
+    <!--
+        - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/font.css">
+
+    <!--
+        - swiper css
+    -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+
+    <!--
+        - custom css links
+    -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+
+    <!--
+        - preload images
+    -->
+    <link rel="preload" as="image" href="assets/image/hero-banner3.png">
+</head>
+<body>
+
+    <!--
+        - #HEADER
+    -->
+
+    <header class="header" data-header>
+        <div class="container">
+            <a href="index.html" class="logo">Foof.Style</a>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="index.html" class="navbar-link">მთავარი</a>
+                    </li>
+
+                    <li>
+                        <a href="#new" class="navbar-link">ახალი</a>
+                    </li>
+
+                    <li>
+                        <a href="#featured" class="navbar-link">გამორჩეული</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-link">მაღაზია</a>
+                    </li>
+                </ul>
+
+                <a href="cart.html" class="card-btn">
+                    <box-icon name='shopping-bag' aria-hidden="true"></box-icon>
+                    <span class="span">კალათა</span>
+                    <span id="cart-count">0</span>
+                </a>
+
+                <a href="#" class="btn">დაგვიკავშირდით</a>
+            </nav>
+
+            <button class="nav-open-btn" aria-label="toggle menu" data-nav-toggler>
+                <box-icon name='menu' aria-hidden="true"></box-icon>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <article>
+
+            <!--
+                - #HERO
+            -->
+
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+
+                        <h1 class="h1 hero-title title">ზაფხულის კოლექცია</h1>
+
+                        <p class="hero-text">
+                            სტილი ხვდება კომფორტს: გაათავისუფლე შენი შინაგანი სიმყუდროვე!
+                        </p>
+
+                        <a href="#" class="btn btn-primary">
+                            <span class="span">იშოპინგე</span>
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </a>
+                    </div>
+
+                    <div class="hero-banner">
+                        <figure class="img-holder" style="--width: 704; --height: 700;">
+                            <img src="assets/image/hero-banner1.jpg" width="704" height="700"
+                             alt="hero banner" class="img-cover">
+                        </figure>
+
+                        <img src="assets/image/hero-shape-1.png" width="255" height="249" 
+                        alt="shape" class="shape shape-1">
+                    </div>
+
+                    <img src="assets/image/hero-shape-2.png" width="360" height="133" 
+                        alt="shape" class="shape shape-2">
+
+                </div>
+            </div>
+
+
+            <!--
+                - # NEW PRODUCTS
+            -->
+
+            <section class="section product" aria-label="prodct" id="new">
+                <div class="container">
+                    <h2 class="h2 section-title title text-center">გამოიკვლიეთ ახალი ჩამოსული</h2>
+
+                    <ul class="product-list has-scrollbar">
+                        
+                        <li class="scrollbar-item">
+                            <div class="product-card text-center">
+
+                                <div class="card-banner">
+
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-1.jpg" width="448" height="470" 
+                                        loading="lazy" alt="Short Sleeve Shirt 01" class="img-cover">
+                                    </figure>
+
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 1,
+                                            image: 'assets/image/product-1.jpg',
+                                            name: 'მოკლემკლავიანი პერანგი 01',
+                                            price: 100
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <h3 class="h4 title">
+                                        <a href="#" class="card-title">მოკლემკლავიანი პერანგი 01</a>
+                                    </h3>
+
+                                    <span class="price">$100.00</span>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="scrollbar-item">
+                            <div class="product-card text-center">
+
+                                <div class="card-banner">
+
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-4.jpg" width="448" height="470" 
+                                        loading="lazy" alt="Short Sleeve Shirt 02" class="img-cover">
+                                    </figure>
+
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 2,
+                                            image: 'assets/image/product-4.jpg',
+                                            name: 'მოკლემკლავიანი პერანგი 02',
+                                            price: 100
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <h3 class="h4 title">
+                                        <a href="#" class="card-title">მოკლემკლავიანი პერანგი 02</a>
+                                    </h3>
+
+                                    <span class="price">$100.00</span>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="scrollbar-item">
+                            <div class="product-card text-center">
+
+                                <div class="card-banner">
+
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-8.jpg" width="448" height="470" 
+                                        loading="lazy" alt="Comfort Dress" class="img-cover">
+                                    </figure>
+
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 3,
+                                            image: 'assets/image/product-8.jpg',
+                                            name: 'კომფორტული კაბა',
+                                            price: 180
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <h3 class="h4 title">
+                                        <a href="#" class="card-title">კომფორტული კაბა</a>
+                                    </h3>
+
+                                    <span class="price">$180.00</span>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="scrollbar-item">
+                            <div class="product-card text-center">
+
+                                <div class="card-banner">
+
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-6.jpg" width="448" height="470" 
+                                        loading="lazy" alt="Tote Bag" class="img-cover">
+                                    </figure>
+
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 4,
+                                            image: 'assets/image/product-6.jpg',
+                                            name: 'ჩანთა',
+                                            price: 50
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+
+                                </div>
+
+                                <div class="card-content">
+
+                                    <h3 class="h4 title">
+                                        <a href="#" class="card-title">ჩანთა</a>
+                                    </h3>
+
+                                    <span class="price">$50.00</span>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+            <!--
+                - #FEATURED
+            -->
+
+            <section class="section feature" aria-label="feature-label" id="featured">
+                <div class="container">
+                    <h2 class="h2 section-title title text-center" id="feature-label">
+                        გამორჩეული პროდუქტები
+                    </h2>
+
+                    <ul class="feature-list">
+
+                        <li>
+                            <div class="product-card text-center">
+                                <div class="card-banner">
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-11.jpg" width="448" height="470"
+                                        loading="lazy" alt="Men Summer Set" class="img-cover">
+                                    </figure>
+    
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 5,
+                                            image: 'assets/image/product-11.jpg',
+                                            name: 'კაცის საზაფხულო სეტი',
+                                            price: 200
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">კაცის საზაფხულო სეტი</a>
+                                    </h3>
+                                    <span class="price">$200.00</span>
+                                </div>
+                            </div>                   
+                        </li>
+    
+                        <li>
+                            <div class="product-card text-center">
+                                <div class="card-banner">
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-10.jpg" width="448" height="470"
+                                        loading="lazy" alt="Women Summer Set" class="img-cover">
+                                    </figure>
+    
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 6,
+                                            image: 'assets/image/product-10.jpg',
+                                            name: 'ქალის საზაფხულო სეტი',
+                                            price: 200
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">ქალის საზაფხულო სეტი</a>
+                                    </h3>
+                                    <span class="price">$200.00</span>
+                                </div>
+                            </div>                       
+                        </li>
+    
+                        <li>
+                            <div class="product-card text-center">
+                                <div class="card-banner">
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-13.jpg" width="448" height="470"
+                                        loading="lazy" alt="Comfort Dress" class="img-cover">
+                                    </figure>
+    
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 7,
+                                            image: 'assets/image/product-13.jpg',
+                                            name: 'კაბა',
+                                            price: 150
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">კაბა</a>
+                                    </h3>
+                                    <span class="price">$150.00</span>
+                                </div>
+                            </div>                           
+                        </li>
+    
+                        <li>
+                            <div class="product-card text-center">
+                                <div class="card-banner">
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-5.jpg" width="448" height="470"
+                                        loading="lazy" alt="Comfort Scirt" class="img-cover">
+                                    </figure>
+    
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 8,
+                                            image: 'assets/image/product-5.jpg',
+                                            name: 'ქვედაკაბა',
+                                            price: 110
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">ქვედაკაბა</a>
+                                    </h3>
+                                    <span class="price">$110.00</span>
+                                </div>
+                            </div>
+                        </li>
+    
+                        <li>
+                            <div class="product-card text-center">
+                                <div class="card-banner">
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-9.jpg" width="448" height="470"
+                                        loading="lazy" alt="Flower Dress" class="img-cover">
+                                    </figure>
+    
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 9,
+                                            image: 'assets/image/product-9.jpg',
+                                            name: 'ყვავილოვანი კაბა',
+                                            price: 170
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">ყვავილოვანი კაბა</a>
+                                    </h3>
+                                    <span class="price">$170.00</span>
+                                </div>
+                            </div> 
+                        </li>
+    
+                        <li>
+                            <div class="product-card text-center">
+                                <div class="card-banner">
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-7.jpg" width="448" height="470"
+                                        loading="lazy" alt="Comfort Hoodie" class="img-cover">
+                                    </figure>
+    
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 10,
+                                            image: 'assets/image/product-7.jpg',
+                                            name: 'ჰუდი',
+                                            price: 170
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">ჰუდი</a>
+                                    </h3>
+                                    <span class="price">$170.00</span>
+                                </div>
+                            </div>                            
+                        </li>
+    
+                        <li>
+                            <div class="product-card text-center">
+                                <div class="card-banner">
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-2.jpg" width="448" height="470"
+                                        loading="lazy" alt="Comfort Long Sleeve" class="img-cover">
+                                    </figure>
+    
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 11,
+                                            image: 'assets/image/product-2.jpg',
+                                            name: 'გრძელმკლავიანი პერანგი',
+                                            price: 120
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">გრძელმკლავიანი პერანგი</a>
+                                    </h3>
+                                    <span class="price">$120.00</span>
+                                </div>
+                            </div>        
+                        </li>
+
+                        <li>
+                            <div class="product-card text-center">
+                                <div class="card-banner">
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-12.jpg" width="448" height="470"
+                                        loading="lazy" alt="Men Oxford Shirt" class="img-cover">
+                                    </figure>
+    
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 12,
+                                            image: 'assets/image/product-12.jpg',
+                                            name: 'კაცის ოქსფორდის პერანგი',
+                                            price: 110
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">კაცის ოქსფორდის პერანგი</a>
+                                    </h3>
+                                    <span class="price">$110.00</span>
+                                </div>
+                            </div>        
+                        </li>
+
+                        <li>
+                            <div class="product-card text-center">
+                                <div class="card-banner">
+                                    <figure class="product-banner img-holder" style="--width: 448; --height: 470;">
+                                        <img src="assets/image/product-6.jpg" width="448" height="470"
+                                        loading="lazy" alt="Tote Bag" class="img-cover">
+                                    </figure>
+    
+                                    <button
+                                        class="btn product-btn"
+                                        onclick="addItemToCart({
+                                            id: 13,
+                                            image: 'assets/image/product-6.jpg',
+                                            name: 'ჩანთა',
+                                            price: 50
+                                        })"
+                                    >
+                                        <ion-icon name="bag" aria-hidden="true"></ion-icon>
+                                        <span class="span">კალათაში დამატება</span>
+                                    </button>
+                                </div>
+
+                                <div class="card-content">
+                                    <h3 class="h3 title">
+                                        <a href="#" class="card-title">ჩანთა</a>
+                                    </h3>
+                                    <span class="price">$50.00</span>
+                                </div>
+                            </div>        
+                        </li>
+    
+                    </ul>
+    
+                    <a href="#" class="btn btn-secondary">ყველა პროდუქტის ნახვა</a>
+                    
+                </div>
+
+            </section>
+
+
+            <!--
+                #OFFER
+            -->
+
+            <section class="offer has-bg-image" style="background-image: url('assets/image/hero-banner4.jpg');">
+                <div class="container-offer">
+                    <div class="offer-card">
+                        <h2 class="title card-title">
+                            ფასდაკლება
+                        </h2>
+
+                        <p class="card-text">
+                            20%-მდე 
+                        </p>
+
+                        <a href="#" class="btn btn-secondary">
+                            <span class="span">იშოპინგე</span>
+
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </article> 
+    </main>
+
+
+    <!--
+        - #FOOTER
+    -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        Foof.Style
+                    </a>
+
+                    <p class="footer-text">
+                        მთავარი ფაქტორი, რომელიც განასხვავებს ჩვენს კონკურენციას, საშუალებას აძლევს სპეციალისტს მივაწოდოთ
+                        ბიზნეს საკონსულტაციო სერვისი იყენებს თავის მრავალფეროვან გამოცდილებას
+                    </p>
+
+                    <ul class="social-list">
+
+                        <li>
+                            <a href="https://www.instagram.com/foofstyle/" class="social-link">
+                                <box-icon name='instagram-alt' type='logo' ></box-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <box-icon name='facebook-circle' type='logo' ></box-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="social-link">
+                                <box-icon name='twitter' type='logo' ></box-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title title">
+                            დაგვიკავშირდით
+                        </p>
+
+                        <address class="footer-text">
+                            კაშანი, ირანი
+                        </address>
+                    </li>
+
+                    <li>
+                        <a href="mailto:info.foofstyle@support.com" class="email">
+                            მეილი: info.foofstyle@support.com
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="+98 *** *** ****" class="email">
+                            +98 *** *** ****
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="footer-list">
+                    <p class="footer-list-title title">
+                        გამოიწერე სიახლეებისთვის
+                    </p>
+
+                    <input type="email" name="email_address" placeholder="Enter your email address"
+                    required autocomplete="off" class="input-field">
+
+                    <button class="btn btn-secondary">გამოიწერე</button>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <div class="wrapper">
+
+                    <div class="link-wrapper">
+                        <a href="#" class="footer-bottom-link">პორტფოლიო</a>
+                        <a href="#" class="footer-bottom-link">Ჩვენი გუნდი</a>
+                        <a href="#" class="footer-bottom-link">ფასების გეგმა</a>
+                        <a href="#" class="footer-bottom-link">სერვისები</a>
+                        <a href="#" class="footer-bottom-link">დაგვიკავშირდით</a>
+                    </div>
+
+                    <div class="link-wrapper">
+                        <a href="#" class="footer-bottom-link">წესები და პირობები</a>
+                        <a href="#" class="footer-bottom-link">Კონფიდენციალურობის პოლიტიკა</a>
+                    </div>
+
+                </div>
+
+                <p class="copyright">
+                    &copy; 2023 Foof.Style, Ყველა უფლება დაცულია
+                </p>
+
+            </div>
+
+            <img src="assets/image/footer-shape-1.png" width="245" height="165"
+            loading="lazy" alt="shape" class="shape shape-1">
+
+            <img src="assets/image/footer-shape-2.png" width="138" height="316"
+            loading="lazy" alt="shape" class="shape shape-2">
+
+            <img src="assets/image/footer-shape-3.png" width="346" height="92"
+            loading="lazy" alt="shape" class="shape shape-3">
+
+        </div>
+
+    </footer>
+
+
+
+    <!--
+        - custom js link
+    -->
+    <script src="assets/js/script.js"></script>
+
+    <!--
+        - swiper js
+    -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--
+        - ionicon link
+    -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    
+</body>
+</html>

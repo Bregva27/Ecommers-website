@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, ititial-scale=1.0">
+    <!--
+        - primary meta tags
+    -->
+    <title>responsive ecommerce clothing website</title>
+    <meta name="title" content="responsive ecommerce clothing website">
+    <meta name="description" content="This is an eCommerce html index made for clothing website">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--
+        - favicon
+    -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/svg+xml">
+
+    <!--
+        - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/font.css">
+
+    <!--
+        - swiper css
+    -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+
+    <!--
+        - custom css links
+    -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+
+    <!--
+        - preload images
+    -->
+    <link rel="preload" as="image" href="assets/image/hero-banner3.png">
+</head>
+<body>
+
+    <header class="header" data-header>
+        <div class="container">
+            <a href="index.html" class="logo">Foof.Style</a>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="index.html" class="navbar-link">მთავარი</a>
+                    </li>
+
+                    <li>
+                        <a href="#new" class="navbar-link">ახალი</a>
+                    </li>
+
+                    <li>
+                        <a href="#featured" class="navbar-link">გამორჩეული</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="navbar-link">მაღაზია</a>
+                    </li>
+                </ul>
+
+                <a href="cart.html" class="card-btn">
+                    <box-icon name='shopping-bag' aria-hidden="true"></box-icon>
+                    <span class="span">კალათა</span>
+                    <span id="cart-count">0</span>
+                </a>
+
+                <a href="#" class="btn">დაგვიკავშირდით</a>
+            </nav>
+
+            <button class="nav-open-btn" aria-label="toggle menu" data-nav-toggler>
+                <box-icon name='menu' aria-hidden="true"></box-icon>
+            </button>
+        </div>
+    </header>
+
+    <main id='main'>
+        <div id="cart-items-container">
+        </div>
+
+        <div class="total-amount">
+            მთიანი ფასი: $<span id="total-amount">0.00</span>
+        </div>
+
+        <div class="credit-card-form">
+          <h1>შეიყვანეთ ბარათის ინფორმაცია </h1>
+          <form>
+            <div class="form-group">
+              <label for="cardNumber">ბარათის ნომერი:</label>
+              <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+            </div>
+            <div class="form-group">
+              <label for="expirationDate">ვადის გასვლის თარიღი:</label>
+              <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY">
+            </div>
+            <div class="form-group">
+              <label for="cvv">CVV:</label>
+              <input type="text" id="cvv" name="cvv" placeholder="123">
+            </div>
+            <div class="form-actions">
+              <button type="submit">გადახდა</button>
+            </div>
+          </form>
+        </div>
+    </main>
+
+
+    <!--
+        - custom js link
+    -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/cart.js"></script>
+
+    <!--
+        - swiper js
+    -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--
+        - ionicon link
+    -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    
+</body>
+</html>
